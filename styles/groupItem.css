@@ -1,0 +1,127 @@
+.group-display {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  grid-column: 1/-1;
+}
+
+.group-view-btn {
+  --__cellSize: 40px;
+  
+  position: relative;
+  
+  display: none;
+  grid-template-columns: repeat(2, var(--__cellSize));
+  place-items: center;
+  
+  height: var(--__cellSize);
+  
+  border: 2px solid var(--clr-slate-700);
+  border-radius: var(--rounded-md);
+  
+  overflow: hidden;
+}
+
+.group-view-btn .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 50%;
+  height: 100%;
+  
+  background: var(--clr-slate-700);
+}
+
+.group-view-btn svg {
+  z-index: 1;
+}
+
+.group-item {
+  --__img-size: 5.5rem;
+  
+  position: relative;
+  display: grid;
+  gap: .5rem;
+ 
+  padding: var(--space-base);
+  
+  text-align: center;
+  
+  background: var(--clr-slate-700);
+  border-radius: var(--rounded-lg);
+}
+
+.group-img {
+  width: var(--__img-size);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  border-radius: 100vw;
+  object-fit: cover;
+  background: white;
+}
+
+.group-title {
+  font-size: var(--fs-sub-head);
+  font-weight: var(--fw-550);
+}
+
+.group-info {
+  color: var(--clr-accent);
+}
+
+.edit-group {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  stroke: var(--clr-accent);
+}
+
+.edit-group svg {
+  transition: .2s linear;
+}
+
+.edit-group:hover svg {
+  stroke: var(--clr-light);
+}
+
+.group-state {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: block;
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 100vw;
+  background: linear-gradient(
+    to bottom right,
+    #1B94D7,
+    #604CDC
+  );;
+}
+
+.create-group {
+  font-size: var(--fs-sub-head);
+  background: var(--clr-slate-500);
+}
+
+.create-group-btn {
+  width: 60px;
+  aspect-ratio: 1;
+  
+  margin-inline: auto;
+  
+  background: var(--clr-slate-700);
+  border-radius: 100vw;
+}
+
+.create-group-btn h3 {
+  font-size: var(--fs-sub-head);
+  font-weight: var(--fw-550);
+}

@@ -1,0 +1,89 @@
+/* custom properties */
+:root {
+  --clr-light: #FFFFFF;
+  --clr-dark: #171717;
+  
+  --clr-accent: #FFFFFF78;
+  
+  --clr-slate-500: #2E3650;
+  --clr-slate-600: #242B42;
+  --clr-slate-700: #1A2036;
+  
+  --space-base: 1rem;
+  
+  --fs-sub-head: 1.25rem;
+  --fs-title: 1.5rem;
+  
+  --fw-550: 550;
+  
+  --rounded-sm: 0.25rem;
+  --rounded-md: .5rem;
+  --rounded-lg: 0.875rem;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+/* prefix styling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg,
+a,
+button,
+label,
+input,
+select {
+  display: block;
+}
+
+img {
+  width: 100%;
+}
+
+button,
+input,
+select {
+  outline: 0;
+  border: 0;
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  display: grid;
+  min-height: 100svh;
+  
+  font-family: "Inter", system-ui;
+  color: var(--clr-light);
+  
+  background: var(--clr-slate-700);
+  overflow-x: hidden;
+}
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Forum - Groups</title>
+ 
+  <link rel="stylesheet" href="./styles/prefix.css">
+  <link rel="stylesheet" href="./styles/navPanal.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/groupItem.css">
+  <link rel="stylesheet" href="../styles/createGroup.css">
+</head>
+
+<body>
+  
+  <div class="wrapper">
+    
+    <ul class="nav-panal">
+      <li id="inbox" class="nav-item center">
+        <svg width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+          <path d="M4 13h3l3 3h4l3 -3h3" />
+        </svg>  
+      </li>
+      <li id="group" class="nav-item center" data-active-nav-item="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+          <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" />
+          <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+          <path d="M17 10h2a2 2 0 0 1 2 2v1" />
+          <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+          <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
+        </svg>
+      </li>
+      <li id="todo" class="nav-item center">
+        <svg width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.5 5.5l1.5 1.5l2.5 -2.5" />
+          <path d="M3.5 11.5l1.5 1.5l2.5 -2.5" />
+          <path d="M3.5 17.5l1.5 1.5l2.5 -2.5" />
+          <path d="M11 6l9 0" />
+          <path d="M11 12l9 0" />
+          <path d="M11 18l9 0" />
+        </svg>
+      </li>
+      <li id="settings" class="nav-item center">
+        <svg width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" />
+          <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+        </svg>
+      </li>
+    </ul>
+    
+    <main>
+      <!-- inbox display panal-->
+      <div id="inbox-display" class="main-panal-item hidden">
+        <div>
+          <h3 class="panal-title">Inbox</h3>
+        </div>
+      </div>
+      
+      <!-- groups display panal -->
+      <div id="group-display" class="main-panal-item group-display">
+        
+        <div class="group-header">
+          <h3 class="panal-title">Groups</h3>
+          
+          <button id="group-view-btn" class="group-view-btn">
+            <span class="overlay"></span>
+            
+            <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+              <path d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+              <path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+              <path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+              <path d="M4 14m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+            </svg>
+          </button>
+        </div>
+        
+        <div class="group-item create-group">
+          <button id="create-group-btn" class="create-group-btn center">
+            <svg width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 5l0 14" />
+              <path d="M5 12l14 0" />
+            </svg>
+          </button>
+          <h3>Create group</h3>
+        </div>
+      
+        <!-- items will be generated here -->
+      
+      </div>
+      
+      <!-- todo display panal-->
+      <div id="todo-display" class="main-panal-item hidden">
+        <div>
+          <h3 class="panal-title">Todo list</h3>
+        </div>
+      </div>
+      
+      <!-- settings display panal-->
+      <div id="settings-display" class="main-panal-item hidden">
+        <div>
+          <h3 class="panal-title">Settings</h3>
+        </div>
+      </div>
+    </main>
+    
+  </div>
+  
+  <!-- main overlay -->
+  <div id="main-overlay" class="main-overlay hidden"></div>
+  
+  <!-- create group form -->
+  <div id="create-group-display" class="create-group-display hidden">
+    <h3 class="panal-title">Create your group</h3>
+    
+    <div class="create-group-form">
+      
+      <div class="img-upload-wrapper">
+        <img id="selected-img" class="selected-img" src="" alt="">
+        <input id="img-input" type="file">
+      </div>
+      
+      <label for="title">Title</label>
+      <input id="title-input" type="text" name="title" placeholder="Weekly Bookclub">
+      
+      <label for="members">Members</label>
+      <input id="members-input" type="number" name="members" placeholder="26">
+      
+      <div class="custom-check-wrapper">
+        Active
+        <div class="custom-check">
+          <input id="active-input" class="active-input" type="checkbox">
+          <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1A2036" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M5 12l5 5l10 -10" />
+          </svg>
+          
+        </div>
+      </div>
+      
+      <button id="cancel-group-btn" class="cancel-group-btn">Cancel</button>
+      <button id="add-group-btn" class="add-group-btn">Add group</button>
+    </div>
+    
+  </div>
+  
+  <script src="./scripts/groupItems.js"></script>
+  <script src="./scripts/navPanel.js"></script>
+</body>
+</html>
+
+

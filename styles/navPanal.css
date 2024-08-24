@@ -1,42 +1,50 @@
 [data-active-nav-item="true"] {
-  background: var(--clr-slate-700) !important;
-  
-  svg {
-    stroke: var(--clr-light) !important;
-  }
+    background: var(--clr-slate-700) !important;
+
+    svg {
+        stroke: var(--clr-light) !important;
+    }
 }
 
 .nav-panal {
-  --__itemSize: 3rem;
-  
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  
-  padding: var(--space-base);
-  
-  background: var(--clr-slate-600);
-  border-radius: var(--rounded-lg);
+    --__itemSize: 3rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    padding: var(--space-base);
+
+    background: var(--clr-slate-600);
+    border-radius: var(--rounded-lg);
 }
 
-.nav-panal > :where(li, svg) {
-  transition: .4s linear;
+@media (min-width: 60rem) {
+    .nav-panal {
+        flex-direction: column;
+    }
+}
+
+.nav-panal> :where(li, svg) {
+    transition: .4s linear;
 }
 
 .nav-panal li {
-  width: var(--__itemSize);
-  height: var(--__itemSize);
-  
-  border-radius: var(--rounded-md);
+    cursor: pointer;
+    width: var(--__itemSize);
+    height: var(--__itemSize);
+
+    border-radius: var(--rounded-md);
 }
 
 .nav-panal svg {
-  stroke: var(--clr-accent);
+    stroke: var(--clr-accent);
 }
 
 .nav-panal li:hover {
-  background: var(--clr-slate-700);
+    background: var(--clr-slate-700);
 }
+
 .nav-panal li:hover svg {
-  stroke: var(--clr-light);
+    stroke: var(--clr-light);
 }
